@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         // Task #1
@@ -17,12 +19,18 @@ public class Main {
             }
         }
         System.out.println("Максимальная сумма трат за неделю составляет " + dailyWaste + " рублей.");
-        for (int theSmallestWaste : daysOfWeek) {
-            if (theSmallestWaste < dailyWaste) {
-                dailyWaste = theSmallestWaste;
-            }
+
+        int minWaste = Arrays.stream(daysOfWeek).min().getAsInt();
+        System.out.println("Минимальная сумма трат за неделю составляет " + minWaste + " рублей.");
+        /*
+        int minWaste = daysOfWeek [0];
+        for (int a = 1; a < daysOfWeek.length - 1; a++) {
+        if (daysOfWeek[a] < minWaste) {
+        minWaste = daysOfWeek[a];
+            System.out.println("Минимальная сумма трат за неделю составляет " + minWaste + " рублей.");
         }
-        System.out.println("Минимальная сумма трат за неделю составляет " + dailyWaste + " рублей.");
+        }
+         */
 
         // Task #3
         wasteSum = 0;
@@ -34,7 +42,7 @@ public class Main {
 
         // Task #4
         char [] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int fullName = reverseFullName.length -1; fullName >= 0; fullName--) {
+        for (int fullName = reverseFullName.length - 1; fullName >= 0; fullName--) {
             System.out.print(reverseFullName[fullName]);
         }
     }
