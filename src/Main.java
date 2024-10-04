@@ -24,12 +24,13 @@ public class Main {
         System.out.println("Минимальная сумма трат за неделю составляет " + minWaste + " рублей.");
         /*
         int minWaste = daysOfWeek [0];
-        for (int a = 1; a < daysOfWeek.length - 1; a++) {
-        if (daysOfWeek[a] < minWaste) {
-        minWaste = daysOfWeek[a];
+        for (int a : daysOfWeek) {
+        if (a < minWaste) {
+        minWaste = a;
             System.out.println("Минимальная сумма трат за неделю составляет " + minWaste + " рублей.");
         }
         }
+
          */
 
         // Task #3
